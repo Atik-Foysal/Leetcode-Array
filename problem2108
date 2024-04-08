@@ -1,0 +1,12 @@
+#Find First Palindromic String in the Array
+class Solution(object):
+    def firstPalimdrome(self, words):
+        def isPalimdrome(word):
+            return word == word [: :-1]
+        for word in words:
+            if isPalimdrome(word):
+                return word
+        return ""
+words = ["abc","car","ada","racecar","cool"]
+sol = Solution()
+print(sol.firstPalimdrome(words))        
